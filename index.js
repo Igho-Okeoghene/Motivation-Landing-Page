@@ -39,16 +39,20 @@ function setGreeting () {
     if(hour < 12) {
         //Morning
         document.body.style.backgroundImage = "url('Morning.jpg')";
+        document.getElementById("Motivation").style.backgroundColor =  "rgba(255, 255, 255, 0.5)";
         document.body.style.color = 'black';
         greeting.textContent = 'Good Morning,';
     } else if(hour < 18) {
         //Afternoon
         document.body.style.backgroundImage = "url('Afternoon.jpg')";
+        document.getElementById("Motivation").style.backgroundColor =  "rgba(255, 255, 255, 0.5)";
         greeting.textContent = 'Good Afternoon,';
     } else { 
         //Evening
         document.body.style.backgroundImage = "url('Evening.jpg')";
         document.body.style.color = 'white';
+        document.getElementById("Motivation").style.backgroundColor =  "rgba(0, 0, 0, 0.5)";
+        document.getElementById("quotes").style.backgroundColor =  "rgba(0, 0, 0, 0.5)";
         greeting.textContent = 'Good Evening,';
     }
 }
@@ -95,7 +99,7 @@ random[9] = '“The only difference between ordinary and extraordinary is that l
 
      randomQuo = Math.floor(Math.random()*(random.length));
     document.getElementById('Motivation').innerHTML = random[randomQuo];
-    setTimeout("randomQuotes()", 5000);
+    setTimeout("randomQuotes()", 30000);
     randomQuo++
 }
     
